@@ -1,0 +1,226 @@
+/*Global*/
+.wp-block{
+    max-width: none;
+}
+@media(min-width:1200px){
+    .edit-post-layout.is-sidebar-opened .edit-post-layout__content{
+        margin-right: 350px;
+    }
+    .edit-post-layout.is-sidebar-opened .edit-post-plugin-sidebar__sidebar-layout, .edit-post-layout.is-sidebar-opened .edit-post-sidebar{
+        width: 350px;
+    }
+}
+@media(min-width:1440px){
+    .edit-post-layout.is-sidebar-opened .edit-post-layout__content{
+        margin-right: 450px;
+    }
+    .edit-post-layout.is-sidebar-opened .edit-post-plugin-sidebar__sidebar-layout, .edit-post-layout.is-sidebar-opened .edit-post-sidebar{
+        width:450px;
+    }
+}
+
+/* Colors */
+:root {
+	--white-color: #fff;
+	--white-tr-color: rgba(255, 255, 255, .3);
+	--black-color: #000;
+	--grey-color: #2A2A2A;
+	--grey-2-color: #3A3A3A;
+	--grey-3-color: #888888;
+	--brawn-color: #DB883A;
+	--brawn-2-color: #B36C39;
+  }
+/* Colors (END) */
+
+/* Container */
+.container{
+	max-width: 1200px;
+	padding: 0 15px;
+	margin: 0 auto;
+}
+.container-sm{
+	max-width: 920px;
+	padding: 0 15px;
+	margin: 0 auto;
+}
+header .container{
+	max-width: 1330px;
+}
+/* Container (END) */
+
+/* Button */
+.button{
+	display: inline-block;
+	text-transform: uppercase;
+	color: var(--black-color);
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 29px;
+	letter-spacing: 0.5px;
+	border-bottom: 2px solid var(--black-color);
+}
+.button.white{
+	color: var(--white-color);
+	border-bottom-color: var(--white-color);
+}
+.button:hover{
+	border-bottom-color: transparent;
+}
+
+/* Button (END) */
+
+/* Banner */
+.banner .item{
+	position: relative;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.banner .item .content{
+	display: flex;
+	flex-direction: column;
+	padding: 130px 0;
+	height: calc(100vh - 260px);
+	min-height: 200px;
+}
+.banner .title{
+	margin-top: auto;
+	color: var(--white-color);
+}
+.banner .button{
+	margin-top: 80px;
+}
+.banner .next-project{
+	cursor: pointer;
+	z-index: 10;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	max-width: 305px;
+	background-color: var(--grey-color);
+	padding: 50px 55px 50px 60px;
+}
+.banner .next-project .title{
+	letter-spacing: .5px;
+	color: var(--white-color);
+}
+.banner .next-project .see-more{
+	margin-top: 15px;
+	text-transform: uppercase;
+	font-weight: 500;
+	color: var(--brawn-color);
+	letter-spacing: 0.5px;
+}
+.banner .next-project .see-more span{
+	margin-left: 15px;
+	font-size: 20px;
+	font-weight: initial;
+}
+
+/* Media */
+@media (max-width: 768px) {
+	.banner .next-project{
+		display: none;
+	}
+}
+@media (max-width: 480px) {
+	.banner .item .content{
+		justify-content: center;
+		align-items: center;
+	}
+	.banner .title{
+		margin-top: initial;
+	}
+	.banner .button{
+		display: none;
+	}
+}
+/* Banner (END) */
+
+/* Text content */
+.text-content{
+	padding: 100px 0 200px;
+}
+.text-content .top-title{
+	position: relative;
+	padding: 60px 0;
+}
+.text-content .top-title:before{
+	content: '';
+	z-index: -1;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 77.5%;
+	width: 100%;
+	background-color: var(--brawn-2-color);
+	opacity: .04;
+}
+.text-content .top-title .title{
+	text-transform: uppercase;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 400;
+	color: var(--grey-2-color);
+	letter-spacing: 4px;
+}
+.text-content .content{
+	padding: 80px 0;
+}
+.text-content .editor h1,
+.text-content .editor h2,
+.text-content .editor h3,
+.text-content .editor h4,
+.text-content .editor h5,
+.text-content .editor h6{
+	color: var(--grey-color);
+}
+.text-content .editor p{
+	letter-spacing: .5px;
+	color: var(--grey-3-color);
+}
+.text-content .button{
+	color: var(--black-color);
+}
+
+/* Media */
+@media (max-width: 992px) {
+	.text-content{
+		padding: 70px 0 140px;
+	}
+	.text-content .top-title{
+		padding: 45px 0;
+	}
+	.text-content .content{
+		padding: 60px 0 30px;
+	}
+}
+@media (max-width: 576px) {
+	.text-content{
+		padding: 55px 0 100px;
+	}
+	.text-content .top-title{
+		padding: 30px 0;
+	}
+	.text-content .top-title .title,
+	.text-content .content-bttn{
+		text-align: center;
+	}
+	.text-content .top-title:before{
+		right: 50%;
+	}
+}
+@media (max-width: 480px) {
+	.text-content{
+		padding: 55px 0 50px;
+	}
+	.text-content .top-title{
+		padding: 20px 0;
+	}
+	.text-content .content{
+		padding: 60px 0 20px;
+	}
+	.text-content .content-bttn{
+		margin-top: 20px;
+	}
+}
+/* Text content (END) */
